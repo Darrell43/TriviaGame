@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Geo');
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url("../images/background-circuits.jpg");
+	background-repeat: both;
+
+	font-family: 'Geo', sans-serif;
+	color: #EDF1F2;
+	font-size: 18px;
+}
+
+main {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	background-color: rgba(19, 72, 87, .9);
+	max-width: 800px;
+	height: 50%;
+	min-height: 400px;
+
+	margin: auto;
+	padding: 6px 10px 5px 10px;
+
+	border: 5px rgba(19, 72, 87, 1);
+	border-style: groove ridge ridge groove;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+hr {
+	border: 2px outset rgba(19, 72, 87, 1);
+	width: 100%;
+	margin: 5px 0;
+}
+
+#QuestionBox {
+	flex-direction: column;
+}
+
+td:first-child {
+	text-align: right;
+}
+td {
+	padding: 5px;
+}
+#restartButton {
+	width: 100%;
+	margin-top: 10px;
+}
+
+section, ul {
+	display: flex;
+	align-items: center;
+}
+ul {
+	flex-direction: column;
+}
+li {
+	border: 2px dashed transparent;
+	background-image: url("../images/empty.png");
+
+	padding: 0 15px;
+	margin: 2px;
+}
+ul.userHover li:hover {
+	border-color: red;
+}
+
+li.wrong {
+	border: 2px solid red;
+}
+li.correct {
+	border: 2px solid #EDF1F2;
+}
+
+#resultHeader {
+	display: none;
+	font-size: 30px;
+}
+#results {
+	display: none;
+	margin: auto;
+	width: 165px;
+}
+
+#resultHeader, #timer {
+	height: 35px;
+	margin: auto;
+}
+#timerSpacer {
+	opacity: 0;
+}
+
+#question {
+	font-size: 22px;
+	text-align: center;
+}
+#answers, #results {
+	flex-grow: 4;
+}
+
+.vertCenter {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+}
+
+@media screen and (max-height: 421px) {
+	main {
+		position: initial;
+		height: calc(100% - 21px);
+		min-height: 0;
+	}
+}
